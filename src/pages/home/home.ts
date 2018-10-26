@@ -9,8 +9,9 @@ import { ApiProvider } from '../../providers/api/api';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public RestApi:ApiProvider) {
+  constructor(public navCtrl: NavController,   public RestApi:ApiProvider) {
 this.search('chicken');
+console.log(this.Data);
   }
 
 Data:any;
@@ -22,6 +23,7 @@ ngOnInit(): void {
   //console.log(this.search("chicken"));
  // console.log(this.api.getRecipesByingredient("chicken"));
 //this.search("potato");   // fel på inläsning? lös detta så bör de vara lätt att fixa en search recipe, sedan slumpmässigt välja 10 av hela datan. 
+console.log(this.Data);
 }
 
 public search(ingredient:string)
