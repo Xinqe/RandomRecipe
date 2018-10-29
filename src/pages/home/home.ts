@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ApiProvider  } from '../../providers/api/api';
+import { RecipePage } from '../recipe/recipe';
 
 
 
@@ -47,6 +48,10 @@ public btnRecipeDetails(event, item)
  {
  console.log(event);
  console.log(item);
+
+ this.navCtrl.push(RecipePage, {
+  recipe: item
+});
  }
 // randomInt(min, max){
 //   return Math.floor(Math.random() * (max - min + 1)) + min;

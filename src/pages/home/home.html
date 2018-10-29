@@ -33,11 +33,18 @@
   <!-- använd array index!, skicka alla hits, när man trycker så använder man sig av index! -->
   
   <div *ngIf="Data !== undefined">
-            <ion-list inset (click)="btnRecipeDetails($event, item)" >
-    <ion-item *ngFor="let recipe of Data">
+            <ion-list inset >
+    <!-- <ion-item *ngFor="let recipe of Data">
       <h2>{{recipe.recipe.label}}</h2>
       <button ion-button round outline (click)="btnRecipeDetails($event, item)" item-end>Details</button>
-     </ion-item>
+     </ion-item> -->
+     <button ion-item *ngFor="let hit of Data" (click)="btnRecipeDetails($event, item)" >
+      <h3>{{hit.recipe.label}}</h3>
+   
+      <div  item-end>
+       <h3>Details</h3>
+      </div>
+    </button>
   </ion-list>
   </div>
 

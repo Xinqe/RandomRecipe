@@ -14,12 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'recipe.html',
 })
 export class RecipePage {
-
+selectedItem:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.selectedItem = navParams.get('recipe');
+    console.log(this.selectedItem);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecipePage');
+ 
   }
 
   
