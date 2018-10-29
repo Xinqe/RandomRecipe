@@ -3,54 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 
-export class Params {
-  sane: any[];
-  q: string[];
-  app_key: string[];
-  app_id: string[];
-}
-
-export class Ingredient {
-  text: string;
-  weight: number;
-}
-
-
-
-export class Recipe {
-  uri: string;
-  label: string;
-  image: string;
-  source: string;
-  url: string;
-  shareAs: string;
-  yield: number;
-  dietLabels: string[];
-  healthLabels: string[];
-  cautions: any[];
-  ingredientLines: string[];
-  ingredients: Ingredient[];
-  calories: number;
-  totalWeight: number;
-  totalTime: number;
-
-}
-
-export class Hit {
-  recipe: Recipe;
-  bookmarked: boolean;
-  bought: boolean;
-}
-
-export class RootObject {
-  q: string;
-  from: number;
-  to: number;
-  params: Params;
-  more: boolean;
-  count: number;
-  hits: Hit[];
-}
 
 /*
   Generated class for the ApiProvider provider.

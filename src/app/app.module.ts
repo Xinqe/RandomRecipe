@@ -12,8 +12,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApiProvider } from '../providers/api/api';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ResolverProvider } from '../providers/resolver/resolver';
-import { GuardsProvider } from '../providers/guards/guards';
 
 @NgModule({
   declarations: [
@@ -39,8 +37,6 @@ import { GuardsProvider } from '../providers/guards/guards';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApiProvider,
-    ResolverProvider,
-    GuardsProvider
   ]
 })
 export class AppModule {}

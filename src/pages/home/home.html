@@ -21,13 +21,12 @@
 </ion-content> -->
 <ion-content>
 
-  <label>Hello</label>
+  <label>Hello</label> 
+  <!-- använd array index!, skicka alla hits, när man trycker så använder man sig av index! -->
   
   <div *ngIf="Data !== undefined">
-<h2>test</h2>
-          <h2>{{Data}}</h2>
             <ion-list inset>
-    <ion-item *ngFor="let recipe of Data"> -->
+    <ion-item *ngFor="let recipe of Data">
 
       <h2>{{recipe.recipe.label}}</h2>
      </ion-item>
