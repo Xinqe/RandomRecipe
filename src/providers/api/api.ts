@@ -3,21 +3,21 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 
-export interface Params {
+export class Params {
   sane: any[];
   q: string[];
   app_key: string[];
   app_id: string[];
 }
 
-export interface Ingredient {
+export class Ingredient {
   text: string;
   weight: number;
 }
 
 
 
-export interface Recipe {
+export class Recipe {
   uri: string;
   label: string;
   image: string;
@@ -36,13 +36,13 @@ export interface Recipe {
 
 }
 
-export interface Hit {
+export class Hit {
   recipe: Recipe;
   bookmarked: boolean;
   bought: boolean;
 }
 
-export interface RootObject {
+export class RootObject {
   q: string;
   from: number;
   to: number;
