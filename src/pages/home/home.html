@@ -22,10 +22,16 @@
 <ion-content>
 
   <label>Hello</label>
-  <!-- <ion-list inset>
-    <ion-item *ngFor="let recipe of Data.hits"> -->
-      <h2>{{Data2.hits?.list[0].recipe.label}}</h2>
-   
-    <!-- </ion-item>
-  </ion-list> -->
+  
+  <div *ngIf="Data !== undefined">
+<h2>test</h2>
+          <h2>{{Data}}</h2>
+            <ion-list inset>
+    <ion-item *ngFor="let recipe of Data"> -->
+
+      <h2>{{recipe.recipe.label}}</h2>
+     </ion-item>
+  </ion-list>
+  </div>
+
 </ion-content>

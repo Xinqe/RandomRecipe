@@ -10,8 +10,8 @@ import { ApiProvider, RootObject, Hit, Recipe, Ingredient, Params } from '../../
 export class HomePage {
 
   constructor(public navCtrl: NavController,   public RestApi:ApiProvider) {
-this.search('chicken');
-console.log(this.Data);
+// this.search('chicken');
+// console.log(this.Data);
   }
 
 Data:any;
@@ -19,18 +19,20 @@ Data2:RootObject;
 ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
+  this.search('chicken');
   console.log("THIS IS CREATED ON INIT");
- console.log(this.Data);
+ //console.log(this.Data);
 }
 
 public search(ingredient:string)
 {
   this.RestApi.getRecipesByingredient(ingredient)
   .then(data => {
-    this.Data = data;
+    this.Data = data.hits;
     console.log(this.Data);
-  }).then(this.Data2 = this.Data);
-  
+  });
+  //this.Data = this.RestApi.getRecipesByingredient("chicken");
+  console.log(this.Data);
 }
 
 }
