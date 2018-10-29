@@ -21,14 +21,22 @@
 </ion-content> -->
 <ion-content>
 
-  <label>Hello</label> 
+  <h2>Search Recipes</h2> 
+
+  <ion-item>
+  <ion-label color="primary" >Search something:  </ion-label>
+  <ion-input [(ngModel)]="queryInput"  placeholder="Search a recipe through a ingredient you have"></ion-input>
+  <button ion-button round outline (click)="btnSearch($event)" item-end>Search</button>
+</ion-item>
+
+
   <!-- använd array index!, skicka alla hits, när man trycker så använder man sig av index! -->
   
   <div *ngIf="Data !== undefined">
-            <ion-list inset>
+            <ion-list inset (click)="btnRecipeDetails($event, item)" >
     <ion-item *ngFor="let recipe of Data">
-
       <h2>{{recipe.recipe.label}}</h2>
+      <button ion-button round outline (click)="btnRecipeDetails($event, item)" item-end>Details</button>
      </ion-item>
   </ion-list>
   </div>

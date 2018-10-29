@@ -5,20 +5,22 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { RecipesPage } from '../pages/recipes/recipes'
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApiProvider } from '../providers/api/api';
 
 import { HttpClientModule } from '@angular/common/http';
+import { RecipePage } from '../pages/recipe/recipe';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    RecipesPage
+    RecipePage
+
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     MyApp,
     HomePage,
     ListPage,
-    RecipesPage
+    RecipePage
+
   ],
   providers: [
     StatusBar,

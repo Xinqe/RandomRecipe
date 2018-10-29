@@ -19,7 +19,7 @@ export class ApiProvider {
 
   Url = 'https://api.edamam.com/search?q=';
   
-  Key = '&app_id=5062cfc7&app_key=b60ea671e9401a57906bc79e7093cbeb';
+  Key = '&app_id=5062cfc7&app_key=b60ea671e9401a57906bc79e7093cbeb&to=100';
 
   //apiUrl = 'https://jsonplaceholder.typicode.com';
 
@@ -45,7 +45,7 @@ export class ApiProvider {
 
 
 }
-  
 
+  
 
 }
