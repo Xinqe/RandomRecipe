@@ -15,5 +15,15 @@
 
 
 <ion-content padding>
-
+    <div  *ngIf="selectedItem !== undefined">
+        <h2>{{selectedItem.label}}</h2>
+        <img src={{selectedItem.image}} alt="">
+        <h3>ingredients: </h3>
+        <ion-list>
+          <ion-item *ngFor="let ingredient of selectedItem.ingredientLines">
+          <label >{{ingredient}}</label>
+          </ion-item>
+        </ion-list>
+        <a href={{selectedItem.url}} >More information about the recipe</a>
+    </div>
 </ion-content>

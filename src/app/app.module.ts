@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,13 +13,14 @@ import { ApiProvider } from '../providers/api/api';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RecipePage } from '../pages/recipe/recipe';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    RecipePage
+    RecipePage,
+    AboutPage
 
   ],
   imports: [
@@ -31,8 +32,8 @@ import { RecipePage } from '../pages/recipe/recipe';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
-    RecipePage
+    RecipePage,
+    AboutPage
 
   ],
   providers: [

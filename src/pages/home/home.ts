@@ -44,13 +44,13 @@ public btnSearch(event)
 
 }
 
-public btnRecipeDetails(event, item)
+public btnRecipeDetails(hit:any)
  {
- console.log(event);
- console.log(item);
+
+ console.log(hit);
 
  this.navCtrl.push(RecipePage, {
-  recipe: item
+  recipe: hit.recipe
 });
  }
 // randomInt(min, max){

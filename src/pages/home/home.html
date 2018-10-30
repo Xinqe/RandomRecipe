@@ -25,7 +25,7 @@
 
   <ion-item>
   <ion-label color="primary" >Search something:  </ion-label>
-  <ion-input [(ngModel)]="queryInput"  placeholder="Search a recipe through a ingredient you have"></ion-input>
+  <ion-input [(ngModel)]="queryInput"  placeholder="..."></ion-input>
   <button ion-button round outline (click)="btnSearch($event)" item-end>Search</button>
 </ion-item>
 
@@ -38,9 +38,9 @@
       <h2>{{recipe.recipe.label}}</h2>
       <button ion-button round outline (click)="btnRecipeDetails($event, item)" item-end>Details</button>
      </ion-item> -->
-     <button ion-item *ngFor="let hit of Data" (click)="btnRecipeDetails($event, item)" >
+     <button ion-item *ngFor="let hit of Data" (click)="btnRecipeDetails(hit)" >
       <h3>{{hit.recipe.label}}</h3>
-   
+      
       <div  item-end>
        <h3>Details</h3>
       </div>
