@@ -53,9 +53,6 @@ public btnRecipeDetails(hit:any)
   recipe: hit.recipe
 });
  }
-// randomInt(min, max){
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
 
 }
 

@@ -21,17 +21,6 @@ export class ApiProvider {
   
   Key = '&app_id=5062cfc7&app_key=b60ea671e9401a57906bc79e7093cbeb&to=100';
 
-  //apiUrl = 'https://jsonplaceholder.typicode.com';
-
-  // public async getRecipesByingredient(ingredient:string):Promise<any> {
-
-  //   return new Promise(resolve => 
-  //     {
-  //       this.http.get(this.Url + ingredient + this.Key)
-  //       .toPromise();
-        
-  //     })
-  // } //
 
   public  getRecipesByingredient(ingredient:string){
 
