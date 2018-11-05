@@ -16,6 +16,7 @@ export class HomePage {
 
 Data:any;
 queryInput:string;
+Error:any;
 
 ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -39,7 +40,12 @@ public btnSearch(event)
   console.log(this.queryInput);
   if(this.queryInput !== undefined)
   {
+    this.Error = ""
     this.search(this.queryInput);
+  }
+  if(this.queryInput === undefined)
+  {
+    this.Error = "Invalid query";
   }
 
 }

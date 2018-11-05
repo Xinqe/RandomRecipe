@@ -31,10 +31,6 @@ export class ApiProvider {
         console.log(err);
       });
     });   
-
-
 }
-
-  
 
 }

@@ -28,24 +28,21 @@
   <ion-input [(ngModel)]="queryInput"  placeholder="..."></ion-input>
   <button ion-button round outline (click)="btnSearch($event)" item-end>Search</button>
 </ion-item>
-
-
-  <!-- använd array index!, skicka alla hits, när man trycker så använder man sig av index! -->
   
   <div *ngIf="Data !== undefined">
             <ion-list inset >
-    <!-- <ion-item *ngFor="let recipe of Data">
-      <h2>{{recipe.recipe.label}}</h2>
-      <button ion-button round outline (click)="btnRecipeDetails($event, item)" item-end>Details</button>
-     </ion-item> -->
+
      <button ion-item *ngFor="let hit of Data" (click)="btnRecipeDetails(hit)" >
       <h3>{{hit.recipe.label}}</h3>
       
       <div  item-end>
-       <!-- <h3>Details</h3> -->
       </div>
     </button>
   </ion-list>
+  </div>
+
+  <div *ngIf="Error">
+    <h1>{{Error}}</h1>
   </div>
 
 </ion-content>
