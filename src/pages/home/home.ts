@@ -43,7 +43,7 @@ public btnSearch(event)
     this.Error = ""
     this.search(this.queryInput);
   }
-  if(this.queryInput === undefined)
+  if(this.queryInput === undefined || this.queryInput === "")
   {
     this.Error = "Invalid query";
   }
